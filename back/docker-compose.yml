@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+
+  login_jwt_back:
+    image: "node:14-alpine"
+    container_name: login_jwt_back
+    user: 1000:1000
+    working_dir: "/api"
+    ports:
+      - ${API_PORT}:${API_PORT}
+    volumes:
+      - .:/api:rw,Z

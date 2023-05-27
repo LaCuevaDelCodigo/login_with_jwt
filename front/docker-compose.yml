@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  login_jwt_front:
+    image: node:16-alpine
+    container_name: login_jwt_front
+    working_dir: "/app"
+    volumes:
+      - .:/app
+    tty: true
+    ports:
+      - 3000:3000
+      - 4173:4173
